@@ -1,0 +1,32 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      # Strictly for development purposes and time constraints are we not using a .env file or environment variables
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: db_dev
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data
+  app:
+    restart: on-failure
+    command: /bin/sh -c "npm install && npm run migration && npm run dev"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    environment:
+      PORT: 8080
+      DATABASE_URL: postgres://user:pass@postgres:5432/db_dev
+      NODE_ENV: development
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app/
+      - /app/node_modules
+#volumes:
+#  postgres_data:
