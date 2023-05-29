@@ -1,449 +1,376 @@
 {
-  "_type": "export",
-  "__export_format": 4,
-  "__export_date": "2023-05-29T03:04:31.785Z",
-  "__export_source": "insomnia.desktop.app:v2022.6.0",
-  "resources": [
+  "info": {
+    "_postman_id": "2a270e15-43b6-4c81-be4e-f242460f5493",
+    "name": "requests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
     {
-      "_id": "req_bd353e47980845e8bab08e27a77eded4",
-      "parentId": "fld_a75c1512caa64f8fa76c0e19c2d53ac2",
-      "modified": 1685329402884,
-      "created": 1685329367671,
-      "url": "http://localhost:8080/api/products/120P90",
-      "name": "Delete product by SKU",
-      "description": "",
-      "method": "DELETE",
-      "body": {},
-      "parameters": [],
-      "headers": [],
-      "authentication": {},
-      "metaSortKey": -1685329367671,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "fld_a75c1512caa64f8fa76c0e19c2d53ac2",
-      "parentId": "wrk_72b1908de7044113b3f264a60af0dc91",
-      "modified": 1685304735942,
-      "created": 1685304735942,
-      "name": "Products",
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1685304735942,
-      "_type": "request_group"
-    },
-    {
-      "_id": "wrk_72b1908de7044113b3f264a60af0dc91",
-      "parentId": null,
-      "modified": 1685303324054,
-      "created": 1685303324054,
-      "name": "Jamie's Shopping Cart",
-      "description": "",
-      "scope": "collection",
-      "_type": "workspace"
-    },
-    {
-      "_id": "req_20407fcedd6e416dbee2d437cca00360",
-      "parentId": "fld_a75c1512caa64f8fa76c0e19c2d53ac2",
-      "modified": 1685304740271,
-      "created": 1685303329519,
-      "url": "http://localhost:8080/api/products",
-      "name": "Get All Products",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [],
-      "authentication": {},
-      "metaSortKey": -1685303704115,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_c7726d17062345ab9377bd9a16ca5375",
-      "parentId": "fld_a75c1512caa64f8fa76c0e19c2d53ac2",
-      "modified": 1685304738915,
-      "created": 1685303704065,
-      "url": "http://localhost:8080/api/products",
-      "name": "Add Product",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n\t\"inventoryQty\": 4,\n\t\"sku\": \"jamie\",\n\t\"price\": 36.0,\n\t\"name\": \"jamie\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1685303704065,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_fe736ab12cc74b7cbb79e8774d757441",
-      "parentId": "fld_c07801aabbb1495285d3b8a4a732c94c",
-      "modified": 1685304727165,
-      "created": 1685304008094,
-      "url": "http://localhost:8080/api/promotions",
-      "name": "Get All Promotions",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [],
-      "authentication": {},
-      "metaSortKey": -1685303316628,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "fld_c07801aabbb1495285d3b8a4a732c94c",
-      "parentId": "wrk_72b1908de7044113b3f264a60af0dc91",
-      "modified": 1685304630356,
-      "created": 1685304630356,
-      "name": "Promotions",
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1685304630356,
-      "_type": "request_group"
-    },
-    {
-      "_id": "req_1fe18b90db9743018304c6f99c7d2816",
-      "parentId": "fld_c07801aabbb1495285d3b8a4a732c94c",
-      "modified": 1685326344993,
-      "created": 1685304710687,
-      "url": "http://localhost:8080/api/promotions",
-      "name": "Create Discount Promotion",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n\t\"sku\": \"120P90\",\n  \"type\": \"buyMoreThanXForYDiscount\",\n\t\"qty\": 1,\n\t\"discountType\": \"percentage\",\n\t\"discount\": 10\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1685303316578,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_5c5453454f494db3bc7617928014d61d",
-      "parentId": "fld_c07801aabbb1495285d3b8a4a732c94c",
-      "modified": 1685304708486,
-      "created": 1685304665393,
-      "url": "http://localhost:8080/api/promotions",
-      "name": "Create buyXGetYFree Promotion",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n\t\"sku\": \"120P90\",\n  \"type\": \"buyXGetYFree\",\n\t\"qty\": 1,\n\t\"freeItemSku\": \"A304SD\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1685303316528,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_ee1539603e17419fa4061aa292d4c324",
-      "parentId": "fld_e6dad99f98ee4d32861f2e63091ec8a9",
-      "modified": 1685326377901,
-      "created": 1685304935829,
-      "url": "http://localhost:8080/api/cart/item",
-      "name": "Upsert Item (Raspberry Pi)",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{ \"cartId\": \"DUMMY_CART\", \"sku\": \"234234\", \"quantity\": 1}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1685304935829,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "fld_e6dad99f98ee4d32861f2e63091ec8a9",
-      "parentId": "wrk_72b1908de7044113b3f264a60af0dc91",
-      "modified": 1685304606323,
-      "created": 1685304606323,
       "name": "Cart",
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1685304606323,
-      "_type": "request_group"
-    },
-    {
-      "_id": "req_daaa88e73f544064b3a522ba2ad0c04d",
-      "parentId": "fld_e6dad99f98ee4d32861f2e63091ec8a9",
-      "modified": 1685305291705,
-      "created": 1685305285178,
-      "url": "http://localhost:8080/api/cart/item",
-      "name": "Upsert Item (Any Sku)",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{ \"cartId\": \"DUMMY_CART\", \"sku\": \"234234\", \"quantity\": 4}"
-      },
-      "parameters": [],
-      "headers": [
+      "item": [
         {
-          "name": "Content-Type",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1685304925613.5,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_3f01a82642ae42cc81e93acbcdbe5e38",
-      "parentId": "fld_e6dad99f98ee4d32861f2e63091ec8a9",
-      "modified": 1685326372840,
-      "created": 1685305144962,
-      "url": "http://localhost:8080/api/cart/item",
-      "name": "Remove Cart Item (Raspberry Pi)",
-      "description": "",
-      "method": "DELETE",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{ \"cartId\": \"DUMMY_CART\", \"sku\": \"234234\", \"quantity\": 4}"
-      },
-      "parameters": [],
-      "headers": [
+          "name": "Get Default Cart",
+          "request": {
+            "description": "",
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/cart/DUMMY_CART",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "DUMMY_CART"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
         {
-          "name": "Content-Type",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1685304915398,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_2ad5f2a4d7cb47399e18bdbe01b7bd4b",
-      "parentId": "fld_e6dad99f98ee4d32861f2e63091ec8a9",
-      "modified": 1685305306531,
-      "created": 1685305306361,
-      "url": "http://localhost:8080/api/cart/item",
-      "name": "Remove Cart Item (Any SKU)",
-      "description": "",
-      "method": "DELETE",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{ \"cartId\": \"DUMMY_CART\", \"sku\": \"234234\", \"quantity\": 4}"
-      },
-      "parameters": [],
-      "headers": [
+          "name": "Clear Default Cart",
+          "request": {
+            "description": "",
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/cart/DUMMY_ID",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "DUMMY_ID"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
         {
-          "name": "Content-Type",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1685304905182.5,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_07f169bb6b934e9face9ca25b778387b",
-      "parentId": "fld_e6dad99f98ee4d32861f2e63091ec8a9",
-      "modified": 1685304908500,
-      "created": 1685304894967,
-      "url": "http://localhost:8080/api/cart",
-      "name": "Create New Cart",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": ""
-      },
-      "parameters": [],
-      "headers": [
+          "name": "Create New Cart",
+          "request": {
+            "description": "",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/cart",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "cart"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
         {
-          "name": "Content-Type",
-          "value": "application/json"
+          "name": "Upsert Item (Raspberry Pi)",
+          "request": {
+            "description": "",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"cartId\": \"DUMMY_CART\", \"sku\": \"234234\", \"quantity\": 1}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/cart/item",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "item"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Cart Item (Raspberry Pi)",
+          "request": {
+            "description": "",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"cartId\": \"DUMMY_CART\", \"sku\": \"234234\", \"quantity\": 4}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/cart/item",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "item"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
+        {
+          "name": "Upsert Item (Any Sku)",
+          "request": {
+            "description": "",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"cartId\": \"DUMMY_CART\", \"sku\": \"jamie\", \"quantity\": 4}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/cart/item",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "item"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Cart Item (Any SKU)",
+          "request": {
+            "description": "",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"cartId\": \"DUMMY_CART\", \"sku\": \"234234\", \"quantity\": 4}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/cart/item",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "item"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
         }
-      ],
-      "authentication": {},
-      "metaSortKey": -1685304894967,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
+      ]
     },
     {
-      "_id": "req_0af98de23ce64480b5f866e4bca38b1a",
-      "parentId": "fld_e6dad99f98ee4d32861f2e63091ec8a9",
-      "modified": 1685305877225,
-      "created": 1685304434359,
-      "url": "http://localhost:8080/api/cart/DUMMY_CART",
-      "name": "Get Default Cart",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [],
-      "authentication": {},
-      "metaSortKey": -1685303319788.25,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
+      "name": "Promotions",
+      "item": [
+        {
+          "name": "Get All Promotions",
+          "request": {
+            "description": "",
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/promotions",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "promotions"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
+        {
+          "name": "Create buyXGetYFree Promotion",
+          "request": {
+            "description": "",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"sku\": \"120P90\",\n  \"type\": \"buyXGetYFree\",\n\t\"qty\": 1,\n\t\"freeItemSku\": \"A304SD\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/promotions",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "promotions"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
+        {
+          "name": "Create Discount Promotion",
+          "request": {
+            "description": "",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"sku\": \"jamie\",\n  \"type\": \"buyMoreThanXForYDiscount\",\n\t\"qty\": 1,\n\t\"discountType\": \"fixed\",\n\t\"discount\": 10\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/promotions",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "promotions"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        }
+      ]
     },
     {
-      "_id": "req_b8b74e63a7434726a8939e897bedd458",
-      "parentId": "fld_e6dad99f98ee4d32861f2e63091ec8a9",
-      "modified": 1685304614076,
-      "created": 1685304458752,
-      "url": "http://localhost:8080/api/cart/DUMMY_ID",
-      "name": "Clear Default Cart",
-      "description": "",
-      "method": "DELETE",
-      "body": {},
-      "parameters": [],
-      "headers": [],
-      "authentication": {},
-      "metaSortKey": -1685303319738.25,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "env_2a73170ae856a37f15cdaa839d4c28a2a0d50e93",
-      "parentId": "wrk_72b1908de7044113b3f264a60af0dc91",
-      "modified": 1685303324075,
-      "created": 1685303324075,
-      "name": "Base Environment",
-      "data": {},
-      "dataPropertyOrder": null,
-      "color": null,
-      "isPrivate": false,
-      "metaSortKey": 1685303324075,
-      "_type": "environment"
-    },
-    {
-      "_id": "jar_2a73170ae856a37f15cdaa839d4c28a2a0d50e93",
-      "parentId": "wrk_72b1908de7044113b3f264a60af0dc91",
-      "modified": 1685303324076,
-      "created": 1685303324076,
-      "name": "Default Jar",
-      "cookies": [],
-      "_type": "cookie_jar"
-    },
-    {
-      "_id": "spc_fd4d145112ee4cef8de1157c45dc5464",
-      "parentId": "wrk_72b1908de7044113b3f264a60af0dc91",
-      "modified": 1685303324063,
-      "created": 1685303324063,
-      "fileName": "Jamie's Shopping Cart",
-      "contents": "",
-      "contentType": "yaml",
-      "_type": "api_spec"
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "description": "",
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
+        {
+          "name": "Add Product",
+          "request": {
+            "description": "",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"inventoryQty\": 4,\n\t\"sku\": \"jamie\",\n\t\"price\": 36.0,\n\t\"name\": \"jamie\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
+        {
+          "name": "Delete product by SKU",
+          "request": {
+            "description": "",
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/120P90",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "products",
+                "120P90"
+              ]
+            },
+            "auth": {}
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
