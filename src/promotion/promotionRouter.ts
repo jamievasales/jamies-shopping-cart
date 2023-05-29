@@ -11,6 +11,7 @@ const promotionValidationMiddleware = (req: Request, res: Response, next: NextFu
         const promotion: PromotionRule = req.body;
         validatePromotion(promotion);
     } catch (e) {
+        console.error(e);
         res.status(400);
         return res.send(e)
     }
@@ -32,6 +33,7 @@ const addPromotion = async (req: Request, res: Response): Promise<Response> => {
         await promotionService.addPromotion(req.body as PromotionRule);
         return res.send(req.body)
     } catch (e) {
+        console.error(e)
         res.status(500);
         return res.send('Could not add promotion')
     }
@@ -41,6 +43,7 @@ const getPromotion = async (req: Request, res: Response): Promise<Response<IProm
     try {
         return res.send(await promotionService.getPromotion(req.params.sku));
     } catch (e) {
+        console.error(e)
         res.status(500);
         return res.send('Could not get promotion')
     }

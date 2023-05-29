@@ -33,6 +33,7 @@ const getCart = async (req: Request, res: Response) => {
 
         return res.send(cart);
     } catch (e) {
+        console.error(e)
         return res.status(500).send('Could not get cart for cartId ' + cartId);
     }
 }
@@ -51,6 +52,7 @@ const removeCartItem = async (req: Request, res: Response) => {
 
         return res.send(cart);
     } catch (e) {
+        console.error(e)
         return res.status(500).send('Could not delete cart item');
     }
 
@@ -70,6 +72,7 @@ const removeCartItems = async (req: Request, res: Response) => {
 
         return res.send(cart);
     } catch (e) {
+        console.error(e)
         return res.status(500).send('Could not delete cart items');
     }
 }
@@ -79,6 +82,7 @@ const createCart = async (req: Request, res: Response): Promise<Response> => {
         const cartId = await cartService.createCart();
         return res.send({cartId: cartId});
     } catch (e) {
+        console.error(e)
         return res.status(500).send('Could not create cart');
     }
 }

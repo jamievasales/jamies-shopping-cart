@@ -10,6 +10,7 @@ const getProducts = async (req: Request, res: Response) => {
         const products = await productService.getProducts();
         return res.send(products);
     } catch (e) {
+        console.error(e)
         return res.status(500).send('Could not get products');
     }
 }
@@ -25,6 +26,7 @@ const getProductBySku = async (req: Request, res: Response) => {
         const product = await productService.getProductBySku(sku as string);
         return res.send(product);
     } catch (e) {
+        console.error(e)
         return res.status(500).send('Could not get product for sku ' + sku);
     }
 }
@@ -40,6 +42,7 @@ const product: IProductDto = req.body;
         await productService.addProduct(product);
         return res.send(product);
     } catch (e) {
+        console.error(e)
         return res.status(500).send('Could not add product');
     }
 }
@@ -55,6 +58,7 @@ const deleteProductBySku = async (req: Request, res: Response) => {
         await productService.deleteProductBySku(sku as string);
         return res.send();
     } catch (e) {
+        console.error(e)
         return res.status(500).send('Could not delete product for sku ' + sku);
     }
 }

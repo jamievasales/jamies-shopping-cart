@@ -89,11 +89,12 @@ export class Cart {
                 discount = baseTotal - (baseTotal * (1 - (promotion.discount / 100)));
             }
             if (promotion.discountType === 'fixed') {
-                discount = this.toDecimalPlaces(promotion.discount);
+                discount = Number(promotion.discount);
             }
+
             cartProduct.discount += this.toDecimalPlaces(discount);
 
-            const discountTypeText = promotion.discountType === 'percentage' ? `${promotion.discount}%` : `$${promotion.discount}%`;
+            const discountTypeText = promotion.discountType === 'percentage' ? `${promotion.discount}%` : `$${promotion.discount}`;
 
             cartProduct.promotionApplied = `Buy ${promotion.qty} or more of ${cartItem.product.name} and save ${discountTypeText}`;
         }
