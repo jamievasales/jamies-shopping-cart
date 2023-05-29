@@ -14,4 +14,8 @@ export class ProductRepository {
             inventory_qty: product.inventoryQty,
         });
     }
+
+    async deleteProductBySku(sku: string) {
+        return db('products').where({sku}).del();
+    }
 }

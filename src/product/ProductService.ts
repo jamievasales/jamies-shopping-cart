@@ -40,4 +40,12 @@ export class ProductService {
             throw error;
         }
     }
+
+    async deleteProductBySku(sku: string) {
+        try {
+            await this.productRepository.deleteProductBySku(sku);
+        } catch (error) {
+            console.error(error);
+        }
+    }
 }

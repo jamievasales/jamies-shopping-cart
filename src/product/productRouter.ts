@@ -44,6 +44,22 @@ const product: IProductDto = req.body;
     }
 }
 
+const deleteProductBySku = async (req: Request, res: Response) => {
+    const {sku} = req.params;
+
+    if (!sku) {
+        return res.status(400).send("sku query param is required");
+    }
+
+    try {
+        await productService.deleteProductBySku(sku as string);
+        return res.send();
+    } catch (e) {
+        return res.status(500).send('Could not delete product for sku ' + sku);
+    }
+}
+
 productRouter.get('/', getProducts);
 productRouter.get('/:sku', getProductBySku);
+productRouter.delete('/:sku', deleteProductBySku);
 productRouter.post('/', addProduct);
