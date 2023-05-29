@@ -3,7 +3,8 @@
 ## Installation
 Run the docker-compose file to start the app and wait for ` Server is running on port 8080`
 
-Running Docker Compose down is recommend for new node modules and db changesets
+Running Docker Compose down is recommend for new node modules and db changesets.
+
 Please ensure that no postgres instances are running locally on port 5432
 ```bash 
 docker-compose down
